@@ -1,0 +1,12 @@
+.layui-tab{
+    margin: 0
+}
+
+.layui-layer-iframe {
+    top: 100px !important;
+    left: 200px !important;
+}
+
+.layui-tab-content{
+    padding: 0
+}

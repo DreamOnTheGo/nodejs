@@ -10,6 +10,7 @@ var upload = multer({ dest: './public/upload' });
 let app = express()
 
 //中间件
+app.use(express.static("./public"))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 app.use(upload.any())
@@ -19,7 +20,7 @@ app.listen(3000)
 
 //模板引擎
 app.set('view engine', 'html')
-app.set('view','./views')
+app.set('views','./views')
 app.engine('html', consolidate.ejs);
 
 //admin 路由
