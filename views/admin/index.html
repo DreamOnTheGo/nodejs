@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>layout 后台大布局 - Layui</title>
+    <title><%=webInfo[0].w_title%></title>
+    <meta name="Keywords" Content=<%=webInfo[0].w_keyWords%>>
+    <meta name="Description" Content=<%=webInfo[0].w_description%>>
     <link rel="stylesheet" href="./../../admin/layui/css/layui.css">
     <link rel="stylesheet" href="./../../admin/css/index.css">
 </head>
@@ -49,11 +51,11 @@
                     <li class="layui-nav-item layui-nav-itemed">
                             <% meun.forEach((ele,index)=>{
                                 if(ele.m_parent==0){ %>
-                                    <a class="" href="javascript:;"><%=ele.m_name%></a>
+                                    <a class="" href="javascript:;"><i class="<%=ele.m_icon%>"></i><%=ele.m_name%></a>
                                     <dl class="layui-nav-child">
                             <%   }else{ %>
 
-                            <dd><a href="javascript:;" data_obj='{"title":"<%=ele.m_name%>","meunId":"<%=ele.m_number%>","url":"<%=ele.m_link%>"}'><%=ele.m_name%></a></dd>
+                            <dd><a href="javascript:;" data_obj='{"title":"<%=ele.m_name%>","meunId":"<%=ele.m_number%>","url":"<%=ele.m_link%>"}'><i class="<%=ele.m_icon%>"></i><%=ele.m_name%></a></dd>
                            
                         <%  } }) %>
                             

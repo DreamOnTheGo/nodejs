@@ -51,7 +51,7 @@ layui.define(["jquery", "element","layer"], function (exports) {
         }else{
             element.tabAdd('demo', {
                 title: dataObj.title//用于演示
-                , content: '<iframe id="mainIframe" height="'+mainHeight+'px" width="100%" name="mainIframe" src="http://www.baidu.com" frameborder="0" scrolling="no" ></iframe>'
+                , content: '<iframe id="mainIframe" height="'+mainHeight+'px" width="100%" name="mainIframe" src="'+dataObj.url+'" frameborder="0" scrolling="no" ></iframe>'
                 , id: dataObj.meunId //实际使用一般是规定好的id，这里以时间戳模拟下
             })
             element.tabChange('demo', dataObj.meunId); 
