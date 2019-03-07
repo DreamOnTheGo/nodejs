@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../admin/css/addMeun.css">
+    <title>Document</title>
+</head>
+<body>
+<form class="layui-form layui-form-pane" action="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">菜单名称</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_name" lay-verify="m_name" autocomplete="off" placeholder="请输入内容" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">菜单编号</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_number" lay-verify="m_number" autocomplete="off" placeholder="请输入内容" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">菜单链接</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_url" autocomplete="off" placeholder="请输入内容" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">父级菜单编号</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_parent" autocomplete="off" placeholder="请输入内容" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">菜单图标</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_icon" autocomplete="off" placeholder="请输入内容" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">菜单排序号</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_orderby" lay-verify="m_orderby" autocomplete="off" placeholder="请输入内容" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item" pane="">
+        <label class="layui-form-label">菜单状态</label>
+        <div class="layui-input-block">
+        <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF" value="0"  lay-filter="switchTest">
+        </div>
+    </div>
+  
+    <div class="layui-form-item">
+        <button class="layui-btn" lay-submit="" lay-filter="demo2">添加</button>
+    </div>
+</form>
+</body>
+</html>
+<script src="./../../admin/layui/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.config({
+        base: '../../admin/js/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('addMeun'); //加载入口
+</script>
